@@ -2,8 +2,7 @@
 
 require 'app.php';
 
-function incluirTemplate( $nombre ) {
-    $index = true;
+function incluirTemplate( string $nombre, bool $headerIndex = false ) {
     include TEMPLATES_URL . "/$nombre.php";
 }
 
