@@ -1,0 +1,62 @@
+.titulo-formulario { 
+    font-size: 2rem;
+    
+    &::after { display: none }
+}
+
+.formulario {
+
+    fieldset { 
+        margin-bottom: 1rem;
+
+        &:last-of-type { margin: 0 }
+    }
+    
+    legend { 
+        color: $grisOscuro;
+        margin: 0; 
+    }
+
+    p { color: lighten($grisOscuro, 30) }
+
+    label {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: $bold;
+        text-align: left;
+        text-transform: uppercase;
+        margin: 1rem 0;
+    }
+
+    input:not( [type = 'submit'] ),
+    textarea,
+    select {
+        display: block;
+        width: 100%;
+        border: .1rem solid darken($gris, 5);
+        border-radius: 1rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    textarea { height: 20rem }
+}
+
+.forma-contacto {
+    display: flex;
+    max-width: 24rem;
+    justify-content: space-between;
+    align-items: center;
+
+    input[type = 'radio'] {
+        margin: 0;
+        width: auto;
+
+        &:hover { cursor: pointer }
+    }
+}
+
+@media (min-width: 480px ) {
+    .titulo-formulario { font-size: 2.4rem }
+    .formulario { .btn-verde { width: auto} }
+}

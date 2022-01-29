@@ -1,0 +1,48 @@
+.testimonial {
+    background: rgba(113,177,0,1);
+    color: $blanco;
+    border-radius: 2rem;
+    padding: 4rem 3rem;
+
+    blockquote, p {
+        font-size: 1.6rem;
+        font-weight: $delgada;
+        color: $blanco;
+    }
+
+    blockquote { 
+        text-align: justify;
+        position: relative;
+        line-height: 1.5;
+        padding: 0 .5rem 2.5rem 5.5rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            background-image: url(/bienesraices/build/img/comilla.svg);
+            background-repeat: no-repeat;
+            width: 6rem;
+            height: 8rem;
+            top: -.8rem;
+            left: -1.3rem;
+        }
+    }
+
+    p { 
+        text-align: right;
+        font-weight: $bold 
+    }
+}
+
+@media (min-width: 480px) {
+    .testimonial {
+        padding: 5rem 2rem;
+
+        blockquote { 
+            text-align: left;
+
+            &::before { left: -.9rem }
+        }
+    }
+}

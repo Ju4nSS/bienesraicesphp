@@ -1,0 +1,51 @@
+.no-webp .index {
+    background-image: url(/bienesraices/build/img/header.jpg);
+}
+
+.webp .index {
+    background-image: url(/bienesraices/build/img/header.jpg);
+}
+
+.index {
+    background-position: center;
+    background-size: cover;
+}
+
+.header { background-color: $grisOscuro }
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1.5rem 0;
+
+    h1 { 
+        font-size: 3rem;
+        line-height: 1.5;
+        text-align: left;
+        font-weight: $bold;
+        color: $blanco;
+        max-width: 60rem;
+        margin: 3rem 0 0 0;
+
+        &::after { display: none }
+    }
+}
+
+.index .header-content { padding: 1.5rem 0 3rem 0 }
+
+@media (min-width: 480px) {
+
+    .index .header-content { height: 85vh }
+
+    .header-content { 
+        justify-content: space-between;
+
+        h1 { 
+            line-height: 1.5;
+            text-align: left;
+            font-size: 3.6rem;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.footer {
+    background-color: $grisOscuro;
+}
+
+.footer-container {
+    padding: $separacion / 2 0;
+
+    .navigation { 
+        display: block;
+
+        a:last-child { margin-bottom: 0 }    
+    }
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1.4rem;
+    color: $blanco;
+    padding-bottom: $separacion / 2;
+}
+
+@media ( min-width: 480px ) {
+    .footer-container .navigation { display: flex }
+}

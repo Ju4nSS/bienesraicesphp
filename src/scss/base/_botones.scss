@@ -1,0 +1,12 @@
+.btn-amarillo-block { @include btn($amarillo, block, auto) }
+.btn-amarillo-inline-block { @include btn($amarillo, inline-block, auto) }
+.btn-verde { @include btn($verde, inline-block, 100%) }
+.btn-amarillo { @include btn( $amarillo, inline-block, 100% ) }
+
+.ver-todas {
+    .btn-verde { margin: 1.5rem 2rem 0 2rem }
+}
+
+@media ( min-width: 480px ) {
+    .btn-verde, .btn-amarillo { width: auto }
+}

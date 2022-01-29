@@ -1,0 +1,47 @@
+.derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-mode-btn {
+    width: 3.4rem;
+    margin: 0 0 1.2rem 0;
+    filter: invert(100%);
+
+    &:hover { cursor: pointer }
+}
+
+.dark-mode {
+    background: darken($grisOscuro, 10);
+
+    .logo { h1 { color: $blanco !important } }
+
+    h1, h2, h3, h4, h5, blockquote, label { color: darken($blanco, 15) !important }
+
+    p, legend { color: darken($blanco, 45) !important }
+
+    .icono, .anuncio, fieldset { border: .1rem solid lighten($grisOscuro, 15) }
+
+    .anuncio { background: darken($grisOscuro, 7) }
+    .iconos-caracteristicas img { filter: invert(90%) }
+    .precio { color: #71b100 !important }
+
+    .contenido-contacto, .testimonial { 
+        h2, p, blockquote { color: $blanco !important }
+    }
+
+    input:not([type="submit"]),
+    textarea,
+    select { 
+        background: darken($grisOscuro, 7);
+        color: darken($blanco, 22.5);
+        border: .1rem solid lighten($grisOscuro, 15)
+    }
+}
+
+@media ( min-width: 480px ) {
+    .derecha { align-items: flex-end }
+    .dark-mode-btn { margin: 2rem 0 2rem 0 }
+}
